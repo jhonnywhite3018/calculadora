@@ -4,25 +4,24 @@ for ($i=0;$i<4;$i++)
 	$sel[]=null;
 if(isset($_GET['op1']) && isset($_GET['op2']))
 {
-	if($_GET['op']=='+')
+	switch ($_GET['op'])
 	{
+	case '+':
 		$resultado = $_GET['op1'] +  $_GET['op2'];
 		$sel[0]= 'selected';
-	}
-	if($_GET['op']=='-')
-	{
+		break;
+	case '-':
 		$resultado = $_GET['op1'] -  $_GET['op2'];
 		$sel[1]= 'selected';
-	}
-	if($_GET['op']=='*')
-	{
+		break;
+	case '*':
 		$resultado = $_GET['op1'] *  $_GET['op2'];
 		$sel[2]= 'selected';
-	}
-	if($_GET['op']=='/')
-	{
+		break;
+	case '/':
 		$resultado = $_GET['op1'] /  $_GET['op2'];
 		$sel[3]= 'selected';
+		break;
 	}	
 }
 else{
